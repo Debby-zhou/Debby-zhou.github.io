@@ -29,9 +29,84 @@
 			<div class="slides">
 				<section>
 					<p>
-						<h3>UMAP分析NPC基因表現量是否有tissue-specific特性</h3>
+						<h2>UMAP分析NPC基因表現量是否有tissue-specific特性</h2>
 					</p>
-					<p>2021/06/07 Mon.</p>
+					<p>
+						2021/06/07 Mon.<br>
+						周治瑗	
+					</p>
+				</section>
+				<section>
+					<h3>installation of used packages</h3>
+					<ul>
+						<li>scikit-learn</li>
+						<li>numpy</li>
+						<li><a href="https://umap-learn.readthedocs.io/en/latest/">umap-learn</a></li>
+						<li>matplotlib</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<section>
+						<h3 data-id="code-title">Hyperparameters in UMAP function</h3>
+						<pre data-id="code-animation">
+							<code class="hljs" data-trim data-line-numbers>
+							import UMAP
+							umap.UMAP(
+									n_neighbors=15,
+									min_dist=0.1,
+									n_components=2,
+									metric='euclidean',
+									title=''
+							)
+							</code>
+						</pre>
+					</section>
+					<section>
+						<strong style="color:gold;">n_neighbors</strong>
+						<p>
+						<ul>
+							<li>the number of neighbors </li>
+							<li>balance local v.s. global structure<br>
+								<small>
+									low values ➝ local <br>
+									high values ➝ global
+								</small>
+							</li>
+							<li>range from 2 to 200</li>
+						</ul>
+						</p>
+					</section>
+					<section>
+						<strong style="color:gold;">min_dist</strong>
+						<p>
+						<ul>
+							<li>minimum distance to apart points</li>
+							<li>Compactness of all points distribution</li>
+							<li>range from 0.0 to 0.99</li>
+						</ul>
+						</p>
+					</section>
+					<section>
+						<strong style="color:gold;">n_components</strong>
+						<p>
+						<ul>
+							<li>determine dimensionality of reduced dimensions</li>
+							<li>usually set as 1 or 3</li>
+						</ul>
+						</p>
+					</section>
+					<section>
+						<strong style="color:gold;">metric</strong>
+						<p>
+						<ul>
+						</ul>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Results of UMAP</h3>
+					</section>
 				</section>
 			</div>
 		</div>
