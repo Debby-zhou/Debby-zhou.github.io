@@ -14,12 +14,12 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="/pptplayer/dist/reset.css">
-		<link rel="stylesheet" href="/pptplayer/dist/reveal.css">
-		<link rel="stylesheet" href="/pptplayer/dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="../reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/dist/theme/black.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="/pptplayer/plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css">
 	</head>
 
 	<body>
@@ -29,17 +29,16 @@
 			<div class="slides">
 				<section>
 					<p>
-						<h2>UMAP分析NPC基因表現量是否有組織特異性</h2>
+						<h2>UMAP to analyze whether NPC gene expression data is tissue-specific</h2>
 					</p>
 					<p>
 						2021/06/07 Mon.<br>
-						周治瑗	
+						Chih-Yuan Chou	
 					</p>
 				</section>
 				<section>
 					<div>
-						<a href="https://miro.com/welcomeonboard/N1VxYVFjS1J5UWZ0RjBlNjlxUVVRdVoyNTE4UnQ5NXZOaDRnWjBOVUM0cWxPZzA5UUFueWdINXpNSmJVSTlXSnwzMDc0NDU3MzU1MTE4NzA1MTIy">分析架構圖</a><br>
-						<small>點擊以上連結登入後可更改架構圖內容</small>
+						<a href="https://miro.com/welcomeonboard/N1VxYVFjS1J5UWZ0RjBlNjlxUVVRdVoyNTE4UnQ5NXZOaDRnWjBOVUM0cWxPZzA5UUFueWdINXpNSmJVSTlXSnwzMDc0NDU3MzU1MTE4NzA1MTIy">Pipeline</a><br>
 					</div>
 					<img src="img/NPC_gene_exp_analysis.jpg">
 				</section>
@@ -140,35 +139,85 @@
 						<h3>Results of UMAP and Kmeans</h3>
 					</section>
 					<section>
-						<img src="img/n_neighbors_2_result.jpg" style="width: 300px; height: 580px;">
-						<img src="img/n_neighbors_10_result.jpg" style="width: 300px; height: 580px;">
-						<img src="img/n_neighbors_20_result.jpg" style="width: 300px; height: 580px;">
+						Diffirent n_neighbors results (2 , 10, 20)
+						<img src="img/n_neighbors_2_min_dist_0.1_result.jpg" style="width: 300px; height: 580px;">
+						<img src="img/n_neighbors_10_min_dist_0.1_result.jpg" style="width: 300px; height: 580px;">
+						<img src="img/n_neighbors_20_min_dist_0.1_result.jpg" style="width: 300px; height: 580px;">
 					</section>
 					<section>
-						<img src="img/n_neighbors_50_result.jpg" style="width: 300px; height: 580px;">
-						<img src="img/n_neighbors_100_result.jpg" style="width: 300px; height: 580px;">
-						<img src="img/n_neighbors_200_result.jpg" style="width: 300px; height: 580px;">
+						Diffirent n_neighbors results (50, 100, 200)
+						<img src="img/n_neighbors_50_min_dist_0.1_result.jpg" style="width: 300px; height: 580px;">
+						<img src="img/n_neighbors_100_min_dist_0.1_result.jpg" style="width: 300px; height: 580px;">
+						<img src="img/n_neighbors_200_min_dist_0.1_result.jpg" style="width: 300px; height: 580px;">
 					</section>
 					<section>
+						Clustering results mapping to tissue classifications
+						<img src="img/df_all.png" style="width: 400px ;height: 600px;">
+					</section>
+					<section>
+						Clustering results mapping to tissue classifications
+						<img src="img/n_neighbors_2_min_dist_0.1_result_boxplot.jpg" style="width: 300px; height: 200px;">
+						<img src="img/n_neighbors_10_min_dist_0.1_result_boxplot.jpg" style="width: 300px; height: 200px;">
+						<img src="img/n_neighbors_20_min_dist_0.1_result_boxplot.jpg" style="width: 300px; height: 200px;">
+						<img src="img/n_neighbors_50_min_dist_0.1_result_boxplot.jpg" style="width: 300px; height: 200px;">
+						<img src="img/n_neighbors_100_min_dist_0.1_result_boxplot.jpg" style="width: 300px; height: 200px;">
+						<img src="img/n_neighbors_200_min_dist_0.1_result_boxplot.jpg" style="width: 300px; height: 200px;">
+					</section>
+					<section>
+						Different min_dist results(0.0, 0.1, 0.25)
 						<img src="img/n_neighbors_10_min_dist_0.0_result.jpg" style="width: 300px; height: 580px;">
-						<img src="img/n_neighbors_10_result.jpg" style="width: 300px; height: 580px;">
+						<img src="img/n_neighbors_10_min_dist_0.1_result.jpg" style="width: 300px; height: 580px;">
 						<img src="img/n_neighbors_10_min_dist_0.25_result.jpg" style="width: 300px; height: 580px;">
 					</section>
 					<section>
+						Different min_dist results(0.5, 0.8, 0.99)
 						<img src="img/n_neighbors_10_min_dist_0.5_result.jpg" style="width: 300px; height: 580px;">
 						<img src="img/n_neighbors_10_min_dist_0.8_result.jpg" style="width: 300px; height: 580px;">
 						<img src="img/n_neighbors_10_min_dist_0.99_result.jpg" style="width: 300px; height: 580px;">
+					</section>
+					<section>
+						Clustering results mapping to tissue classifications
+						<img src="img/n_neighbors_10_min_dist_0.0_result_boxplot.jpg" style="width: 300px; height: 200px;">
+						<img src="img/n_neighbors_10_min_dist_0.1_result_boxplot.jpg" style="width: 300px; height: 200px;">
+						<img src="img/n_neighbors_10_min_dist_0.25_result_boxplot.jpg" style="width: 300px; height: 200px;">
+						<img src="img/n_neighbors_10_min_dist_0.5_result_boxplot.jpg" style="width: 300px; height: 200px;">
+						<img src="img/n_neighbors_10_min_dist_0.8_result_boxplot.jpg" style="width: 300px; height: 200px;">
+						<img src="img/n_neighbors_10_min_dist_0.99_result_boxplot.jpg" style="width: 300px; height: 200px;">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Conslusion</h3>
+					</section>
+					<section>
+						The optimized hyperparameters
+						<pre data-id="code-animation">
+							<code class="hljs" data-trim data-line-numbers>
+							import UMAP
+							umap.UMAP(
+									n_neighbors=10,
+									min_dist=0.1,
+									n_components=2,
+									metric='euclidean'
+							)
+							</code>
+						</pre>
+						<small style="text-align-last: left;">So, the highset median is <font style="color: darkorange;">0.5013</font> and Q3 is <font style="color: darkorange;">0.8205</font>, which means some have tissue-specific features but others don't.</small>
+					</section>
+					<section>
+						Results of tissue-specific distribution
+						<img src="img/tissue-distribution.png">
 					</section>
 				</section>
 			</div>
 		</div>
 
-		<script src="/pptplayer/dist/reveal.js"></script>
-		<script src="/pptplayer/plugin/zoom/zoom.js"></script>
-		<script src="/pptplayer/plugin/notes/notes.js"></script>
-		<script src="/pptplayer/plugin/search/search.js"></script>
-		<script src="/pptplayer/plugin/markdown/markdown.js"></script>
-		<script src="/pptplayer/plugin/highlight/highlight.js"></script>
+		<script src="../reveal.js/dist/reveal.js"></script>
+		<script src="../reveal.js/plugin/zoom/zoom.js"></script>
+		<script src="../reveal.js/plugin/notes/notes.js"></script>
+		<script src="../reveal.js/plugin/search/search.js"></script>
+		<script src="../reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="../reveal.js/plugin/highlight/highlight.js"></script>
 		<script>
 
 			// Also available as an ES module, see:
