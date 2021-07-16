@@ -4,13 +4,31 @@ html {
 }
 
 body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+	width: 100%;
+    display: block;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    padding: 0;
+    margin: 0;
 }
 
+header {
+	width: 100%;
+	min-height: 50px;
+	overflow: auto;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	background-color: #eaeaea;
+}
+footer {
+	background-color: #eaeaea;
+}
 div {
 	padding: 0.5em;
+}
+
+section {
+	padding-bottom: 1em;
 }
 
 .container {
@@ -18,6 +36,66 @@ div {
 }
 
 .navbar-brand {
-	font-size: xxx-large;
 	font-family: cursive;
+}
+
+body .sidebar {
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
+	font-family: Times New Roman;
+	padding-left: 2em;
+	padding-top: 2em;
+}
+
+body .sidebar > ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+body .sidebar > ul > li {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+} 
+
+body .sidebar > ul > li > a{
+	color: #484848;
+	padding: 0.5em 0 0.5em 0;
+	text-decoration: none;
+	display: block;
+}
+
+body .sidebar > ul > li.active {
+	background-color: gainsboro;
+}
+
+body .sidebar > ul > li.active > a{
+	color:  black;
+}
+
+body .sidebar > ul > li > a:hover {
+	color:  black;
+}
+
+body .sidebar > ul > li > h5 {
+	color:  gray;
+	font-weight: bold;
+	border-bottom: 1px solid lightgray;
+	padding-top: 0.5em;
+}
+
+body .content {
+	width: 70%;
+	display: inline-block;
+	font-family: Times New Roman;
+	padding-top: 2em;
+	padding-right: 1em;
+	padding-left: 2em;
+	margin: auto;
+	word-wrap: break-word;
+}
+
+.projectname {
+	font-weight: bold;
 }
