@@ -1,6 +1,6 @@
-
 html {
 	height: 100%;
+	font-family: sans-serif, serif, fantasy, monospace, cursive;
 }
 
 body {
@@ -10,6 +10,14 @@ body {
 }
 
 div {
-	margin: auto;
 	padding: 0.5em;
+}
+
+.container {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-brand {
+	font-size: xxx-large;
+	font-family: cursive;
 }
