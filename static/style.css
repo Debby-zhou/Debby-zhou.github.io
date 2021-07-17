@@ -8,6 +8,7 @@ body {
     display: block;
     font-size: 15px;
     letter-spacing: 0.05em;
+    word-wrap: break-word;
     padding: 0;
     margin: 0;
 }
@@ -18,11 +19,13 @@ header {
 	overflow: auto;
 	padding-top: 1em;
 	padding-bottom: 0.5em;
-	background-color: #eaeaea;
+	box-shadow: 3px 3px 3px lightgray;
 }
+
 footer {
-	background-color: #eaeaea;
+	box-shadow: 2px 2px 2px 2px lightgray;
 }
+
 div {
 	padding: 0.5em;
 }
@@ -32,7 +35,8 @@ section {
 }
 
 .container {
-	background: rgba(255, 255, 255, 0.5);
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 .navbar-brand {
@@ -96,6 +100,115 @@ body .content {
 	word-wrap: break-word;
 }
 
+.intro {
+	padding: 0;
+	margin: 0;
+}
+
+.intro .intro-name {
+	position: relative;
+	left: 10%;
+	background-color: rgba(255,255,255,0.9);
+	padding: 0;
+	margin: 0;
+	width: 10%;
+	height: 80%;
+	color: black;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	font-family: PMingLiU;
+}
+
+.intro .intro-name .name {
+	position: relative;
+	top: 55%;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+.gray {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+} 
+
 .projectname {
 	font-weight: bold;
+}
+
+.pagetitle {
+	font-weight: 700;
+}
+
+.row {
+	justify-content: center;
+}
+
+.row .logoinfo {
+	padding: 1em;
+	margin: 1em 2em;
+	box-shadow: 3px 3px 3px 3px lightgray;
+	border-radius: 40px;
+}
+
+.row .logoinfo:hover {
+	background-color: #cfcfcf;
+}
+
+.row .logoinfo .logopic {
+	height: 150px;
+}
+
+.row .logoinfo .logopic > img {
+	display: block;
+	margin: 1em auto 0.5em;
+}
+
+.row .logoinfo .logotext {
+	color: darkslategray;
+	text-align: center;
+	letter-spacing: 0;
+	text-shadow: 2px 2px lightgray;
+	font-family: Times New Roman;
+}
+
+.page-tag {
+	padding: 0;
+	margin: 0;
+	justify-content: start;
+	text-align: center;
+}
+
+.pag-tag .col-md-2 {
+	padding: 0;
+	margin: 0;
+}
+
+.page-tag .show {
+	background-color: lightgray;
+}
+
+.page-tag .col-md-2 .tag-title:hover {
+	font-weight: bold;
+	color: black;
+}
+
+.page-tag .col-md-2 .tag-title {
+	margin: 0;
+}
+
+.page-tag .col-md-2 > a {
+	color: #505050;
+	text-decoration: none;
+	margin: 0;
+}
+
+.timeline {
+	max-width: 100%;
+	overflow: hidden;
+	margin: 0;
+	font-family: Times New Roman;
 }
