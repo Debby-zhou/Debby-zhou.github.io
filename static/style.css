@@ -1,214 +1,74 @@
-html {
+html, body {
+	background-color: black;
+	font-family: Times New Roman,serif, sans-serif,monospace,cursive;
+	color: whitesmoke;
 	height: 100%;
-	font-family: sans-serif, serif, fantasy, monospace, cursive;
-}
-
-body {
 	width: 100%;
-    display: block;
-    font-size: 15px;
-    letter-spacing: 0.05em;
-    word-wrap: break-word;
-    padding: 0;
-    margin: 0;
+}
+::selection{
+	background-color: darkgreen;
 }
 
 header {
-	width: 100%;
-	min-height: 50px;
-	overflow: auto;
-	padding-top: 1em;
-	padding-bottom: 0.5em;
-	box-shadow: 3px 3px 3px lightgray;
+	display: flex;
+	margin: 0;
+	padding: 0 1em;
+	background-color: rgba(10,80,45,0.5);
+	align-items: center;
+	height: 10%;
 }
 
 footer {
-	box-shadow: 2px 2px 2px 2px lightgray;
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.2);
+	text-align: center;
+	align-items: center;
 }
 
-div {
-	padding: 0.5em;
-}
-
-section {
-	padding-bottom: 1em;
-}
-
-.container {
-	padding-top: 1em;
-	padding-bottom: 1em;
-}
-
-.navbar-brand {
-	font-family: cursive;
-}
-
-body .sidebar {
-	width: 25%;
-	display: inline-block;
-	vertical-align: top;
-	font-family: Times New Roman;
-	padding-left: 2em;
-	padding-top: 2em;
-}
-
-body .sidebar > ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-
-body .sidebar > ul > li {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-} 
-
-body .sidebar > ul > li > a{
-	color: #484848;
-	padding: 0.5em 0 0.5em 0;
+a {
 	text-decoration: none;
-	display: block;
+	color: white;
 }
 
-body .sidebar > ul > li.active {
-	background-color: gainsboro;
+header > span > h1 {
+	color: whitesmoke;
+	font-size: 250%;
+	text-shadow: 5px 5px 5px black;
+	text-transform: uppercase;
 }
-
-body .sidebar > ul > li.active > a{
-	color:  black;
-}
-
-body .sidebar > ul > li > a:hover {
-	color:  black;
-}
-
-body .sidebar > ul > li > h5 {
-	color:  gray;
-	font-weight: bold;
-	border-bottom: 1px solid lightgray;
-	padding-top: 0.5em;
-}
-
-body .content {
-	width: 70%;
-	display: inline-block;
-	font-family: Times New Roman;
-	padding-top: 2em;
-	padding-right: 1em;
-	padding-left: 2em;
+.main-menu {
+	display: flex;
 	margin: auto;
-	word-wrap: break-word;
+	padding: auto;
+	float: right;
 }
 
-.intro {
-	padding: 0;
-	margin: 0;
+.main-menu > ul {
+	display: flex;
+	list-style-type: none;
 }
 
-.intro .intro-name {
-	position: relative;
-	left: 10%;
-	background-color: rgba(255,255,255,0.9);
-	padding: 0;
-	margin: 0;
-	width: 10%;
-	height: 80%;
-	color: black;
-	-webkit-writing-mode: vertical-rl;
-	writing-mode: vertical-rl;
-	font-family: PMingLiU;
-}
-
-.intro .intro-name .name {
-	position: relative;
-	top: 55%;
-	font-size: 80px;
-	font-weight: bold;
-}
-
-.gray {
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	filter: grayscale(100%);
-	filter: gray;
-} 
-
-.projectname {
-	font-weight: bold;
-}
-
-.pagetitle {
-	font-weight: 700;
-}
-
-.row {
-	justify-content: center;
-}
-
-.row .logoinfo {
-	padding: 1em;
-	margin: 1em 2em;
-	box-shadow: 3px 3px 3px 3px lightgray;
-	border-radius: 40px;
-}
-
-.row .logoinfo:hover {
-	background-color: #cfcfcf;
-}
-
-.row .logoinfo .logopic {
-	height: 150px;
-}
-
-.row .logoinfo .logopic > img {
+.main-menu > ul > a > li {
 	display: block;
-	margin: 1em auto 0.5em;
+	margin: 0 0 0.25em;
+	padding: 0.5em 1em;
+	font-size: 120%;
+	text-transform: uppercase;
+	color: lightgray;
 }
 
-.row .logoinfo .logotext {
-	color: darkslategray;
-	text-align: center;
-	letter-spacing: 0;
-	text-shadow: 2px 2px lightgray;
-	font-family: Times New Roman;
+.main-menu > ul > a > li:hover {
+	border: 2px solid lightgray;
 }
 
-.page-tag {
-	padding: 0;
-	margin: 0;
-	justify-content: start;
-	text-align: center;
-}
-
-.pag-tag .col-md-2 {
-	padding: 0;
-	margin: 0;
-}
-
-.page-tag .show {
-	background-color: lightgray;
-}
-
-.page-tag .col-md-2 .tag-title:hover {
+.main-menu > ul > a > li.active {
 	font-weight: bold;
-	color: black;
+	color: greenyellow;
 }
 
-.page-tag .col-md-2 .tag-title {
-	margin: 0;
-}
-
-.page-tag .col-md-2 > a {
-	color: #505050;
-	text-decoration: none;
-	margin: 0;
-}
-
-.timeline {
-	max-width: 100%;
-	overflow: hidden;
-	margin: 0;
-	font-family: Times New Roman;
+.content {
+	margin: auto 2em;
+	padding: 2em;
+	min-height: 800px;
+	display: block;
 }
