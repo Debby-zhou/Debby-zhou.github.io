@@ -4,18 +4,22 @@ html, body {
 	color: whitesmoke;
 	height: 100%;
 	width: 100%;
+	font-size: 14pt;
 }
 ::selection{
-	background-color: darkgreen;
+	background-color: gray;
 }
 
 header {
 	display: flex;
-	margin: 0;
+	position: fixed;
+	top: 0;
 	padding: 0 1em;
-	background-color: rgba(10,80,45,0.5);
 	align-items: center;
+	width: 100%;
 	height: 10%;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 2;
 }
 
 footer {
@@ -30,16 +34,25 @@ a {
 	color: white;
 }
 
+header > span {
+	display: flex;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+
 header > span > h1 {
+	display: block;
+	padding: 0;
 	color: whitesmoke;
 	font-size: 250%;
 	text-shadow: 5px 5px 5px black;
 	text-transform: uppercase;
 }
+
 .main-menu {
 	display: flex;
 	margin: auto;
-	padding: auto;
+	padding: 0 1em 0 0;
 	float: right;
 }
 
@@ -58,17 +71,98 @@ header > span > h1 {
 }
 
 .main-menu > ul > a > li:hover {
-	border: 2px solid lightgray;
+	background-color: #1f1f1f;
 }
 
 .main-menu > ul > a > li.active {
 	font-weight: bold;
-	color: greenyellow;
+	color: yellow;
+	border-bottom: 2px solid yellow;
+}
+
+.content-fluid {
+	margin: 5em 0 0;
+	padding: 0;
+	height: 100%;
+}
+
+.content-fluid > div.metahead{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 80%;
+	align-items: center;
+	-webkit-filter: sepia(.8);
 }
 
 .content {
-	margin: auto 2em;
-	padding: 2em;
+	margin: 5em 2em 0;
+	padding: auto 2em;
 	min-height: 800px;
 	display: block;
+}
+
+.motto {
+	width: 70%;
+	display: block;
+	position: relative;
+	top: 50%;
+	margin: auto;
+	padding: 0.5em;
+	color: black;
+	text-shadow: 2px 2px dimgray;
+	text-align: center;
+	font-size: 1cm;
+	background-color: rgba(255,255,255,.6);
+	font-weight: bold;
+}
+
+.section {
+	display: block;
+	margin: 0;
+	padding: 5em;
+	min-height: 50%;
+}
+
+.section.bg-light {
+	background-color: #111111;
+}
+
+.section .section-title {
+	font-size: 25pt;
+	width: 400px;
+	margin: auto;
+	padding: auto;
+	color: yellow;
+	font-weight: bolder;
+	text-align: center;
+	text-transform: uppercase;
+	box-shadow: 
+		0 0 0 2px yellow,
+		0 0 0 4px black,
+		0 0 0 6px yellow;
+}
+
+.section > div {
+	text-align: center;
+}
+
+.section > div > h2 {
+	text-decoration: underline;
+	text-align: center;
+}
+
+.section > div > span {
+	text-align: left;
+}
+
+.section > div > span.context {
+	margin: 2em 5em;
+	padding: auto;
+	float: left;
+}
+.section > div > span > ul {
+	display: block;
+	margin: auto;
+	padding: auto;
 }
