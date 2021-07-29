@@ -92,7 +92,7 @@ header > span > h1 {
 	width: 100%;
 	height: 80%;
 	align-items: center;
-	-webkit-filter: sepia(.8);
+	-webkit-filter: grayscale(80);
 }
 
 .content {
@@ -154,6 +154,7 @@ header > span > h1 {
 
 .section > div > span {
 	text-align: left;
+	font-size: 14pt;
 }
 
 .section > div > span.context {
