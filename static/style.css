@@ -18,7 +18,7 @@ header {
 	align-items: center;
 	width: 100%;
 	height: 10%;
-	background-color: rgba(0,0,0,0.9);
+	background-color: rgba(0,0,0,.8);
 	z-index: 2;
 }
 
@@ -43,16 +43,16 @@ header > span {
 header > span > h1 {
 	display: block;
 	padding: 0;
-	color: whitesmoke;
+	color: transparent;
+	-webkit-text-stroke: 2px white;
 	font-size: 200%;
-	text-shadow: 5px 5px 5px black;
 	text-transform: uppercase;
 }
 
 .main-menu {
-	display: flex;
+	display: block;
 	margin: auto;
-	padding: 0 1em 0 0;
+	padding: 0;
 	float: right;
 }
 
@@ -63,15 +63,15 @@ header > span > h1 {
 
 .main-menu > ul > a > li {
 	display: block;
-	margin: 0 0 0.25em;
-	padding: 0.5em 1em;
+	margin: 0;
+	padding: 0 1em;
 	font-size: 110%;
 	text-transform: uppercase;
 	color: lightgray;
 }
 
 .main-menu > ul > a > li:hover {
-	background-color: #1f1f1f;
+	font-weight: bold;
 }
 
 .main-menu > ul > a > li.active {
@@ -97,7 +97,7 @@ header > span > h1 {
 
 .content {
 	margin: 5em 2em 0;
-	padding: auto 2em;
+	padding: auto;
 	min-height: 800px;
 	display: block;
 }
@@ -166,4 +166,68 @@ header > span > h1 {
 	display: block;
 	margin: auto;
 	padding: auto;
+}
+
+.content .language-logo > ul {
+	display: block;
+	width: auto;
+	list-style-type: none;
+	border: 2px solid yellow;
+	position: fixed;
+	top: 20%;
+	left: 2%;
+	margin: 0;
+	padding: 0;
+}
+
+.content .language-logo > ul > a {
+	margin: 0;
+	padding: 0;
+}
+
+.content .language-logo > ul > a > li {
+	margin: 0;
+	padding: 1em;
+}
+
+.content .language-logo > ul > a > li:hover {
+	transform: scale(1.2);
+}
+
+.content .language-logo > ul > a > li.active {
+	border: 2px solid yellow;
+	background-color: yellow;
+}
+
+.content .language-logo > ul > a > li > img {
+	margin: auto;
+	padding: auto;
+}
+
+.content .context {
+	width: 80%;
+	min-height: 800px;
+	display: block;
+	margin: 5% 10%;
+	padding: 3em;
+	background-color: whitesmoke;
+	color: black;
+}
+
+.content .context > div > h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 0 1em;
+	padding: 0.5em;
+	background-color: lightgray;
+}
+
+.content .context > div > h3 {
+	text-align: left;
+}
+
+.content .context > div > span {
+	text-align: left;
+	color: gray;
 }
