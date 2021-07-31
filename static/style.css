@@ -7,7 +7,8 @@ html, body {
 	font-size: 12pt;
 }
 ::selection{
-	background-color: gray;
+	background-color: #A47C05;
+	color: whitesmoke;
 }
 
 header {
@@ -63,9 +64,8 @@ header > span > h1 {
 
 .main-menu > ul > a > li {
 	display: block;
-	margin: 0;
-	padding: 0 1em;
-	font-size: 110%;
+	margin: 0 1em;
+	padding: 0.5em 0;
 	text-transform: uppercase;
 	color: lightgray;
 }
@@ -96,7 +96,7 @@ header > span > h1 {
 }
 
 .content {
-	margin: 5em 2em 0;
+	margin: 5em auto 0;
 	padding: auto;
 	min-height: 800px;
 	display: block;
@@ -168,66 +168,60 @@ header > span > h1 {
 	padding: auto;
 }
 
-.content .language-logo > ul {
-	display: block;
-	width: auto;
-	list-style-type: none;
-	border: 2px solid yellow;
-	position: fixed;
-	top: 20%;
-	left: 2%;
-	margin: 0;
-	padding: 0;
-}
-
-.content .language-logo > ul > a {
-	margin: 0;
-	padding: 0;
-}
-
-.content .language-logo > ul > a > li {
-	margin: 0;
-	padding: 1em;
-}
-
-.content .language-logo > ul > a > li:hover {
-	transform: scale(1.2);
-}
-
-.content .language-logo > ul > a > li.active {
-	border: 2px solid yellow;
-	background-color: yellow;
-}
-
-.content .language-logo > ul > a > li > img {
-	margin: auto;
-	padding: auto;
-}
-
 .content .context {
 	width: 80%;
 	min-height: 800px;
 	display: block;
-	margin: 5% 10%;
-	padding: 3em;
-	background-color: whitesmoke;
-	color: black;
+	margin: auto;
+	padding: auto;
 }
 
-.content .context > div > h1 {
-	text-align: center;
+.content .context > div {
+	margin: 0.5em;
+	padding: 2em 2em;
+}
+
+.content .context > div.title {
+	display: block;
+	margin: auto;
+	padding: auto;
 	text-transform: uppercase;
-	font-weight: bold;
-	margin: 0 0 1em;
-	padding: 0.5em;
-	background-color: lightgray;
+	font-weight: bolder;
+	color: yellow;
+	background-color: black;
 }
 
-.content .context > div > h3 {
-	text-align: left;
+ul.classification {
+	list-style-type: none;
+	display: flex;
+	margin: 1em 0;
+	padding: auto;
 }
 
-.content .context > div > span {
-	text-align: left;
-	color: gray;
+ul.classification > li {
+	margin: auto;
+	padding: auto;
 }
+
+ul.classification > li > div {
+	display: block;
+	margin: 1em auto;
+	padding: auto;
+	text-align: center;
+} 
+
+.big-logo > a {
+	margin: auto;
+	padding: auto;
+}
+
+.big-logo > a:hover{
+	color: yellow;
+}
+
+.big-logo > a > i {
+	font-size: 700%;
+	margin: auto;
+	padding: auto;
+}
+
